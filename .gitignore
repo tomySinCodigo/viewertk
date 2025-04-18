@@ -1,4 +1,5 @@
 otros/
+__pycache__/
 *.jpg
 *.png
 *.pyc
