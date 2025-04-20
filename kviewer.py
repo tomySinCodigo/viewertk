@@ -55,6 +55,11 @@ class KViewer(tk.Canvas):
         if hasattr(self, 'IMAGE'):
             self._setImage(self.IMAGE, cnf=True)
 
+    def _resize(self, e=None) -> None:
+        """resize image on resize event"""
+        if hasattr(self, 'IMAGE'):
+            self._setImage(self.IMAGE, cnf=True)
+
 
 if __name__ == '__main__':
     vn = tk.Tk()
