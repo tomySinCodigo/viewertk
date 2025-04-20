@@ -50,7 +50,6 @@ class KViewer(tk.Canvas):
     
     def changeModeView(self, e=None) -> None:
         """change image view mode"""
-        print('changeModeView')
         self.FIT = not self.FIT
         if hasattr(self, 'IMAGE'):
             self._setImage(self.IMAGE, cnf=True)

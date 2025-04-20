@@ -11,11 +11,12 @@ class TestWidgetPane(tk.Frame):
 
     def _configTestWidgetPane(self):
         pw = tk.PanedWindow(
-            self, orient=tk.VERTICAL, bg='skyblue'
+            self, orient=tk.VERTICAL,
+            sashwidth=5, sashrelief="flat", bg="black"
         )
         pw.grid(row=0, column=0, sticky='wens')
 
-        self.viewer = KViewer(pw, bg='green')
+        self.viewer = KViewer(pw, bg='#080500')
         tex = tk.Text(pw, bg='red')
         tex.insert(tk.END, "holas  sa")
 
@@ -32,7 +33,6 @@ if __name__ == '__main__':
     vn = tk.Tk()
     vn.geometry('250x420')
     wg = TestWidgetPane(vn, bg='pink')
-    # wg = KViewer(vn, bg='yellow')
     wg.grid(row=0, column=0, sticky='wens')
     vn.columnconfigure(0, weight=1)
     vn.rowconfigure(0, weight=1)
